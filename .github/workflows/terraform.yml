@@ -1,6 +1,15 @@
 name: IVS Inspector Prerequisites Deployment Pipeline with GitHub Actions
 
-on: workflow_dispatch
+on: 
+  workflow_dispatch:
+    account_id:
+      description: 'Provide Account ID'     
+      required: true
+      default: 'account_id'
+    branch:
+      description: 'Provide Region'     
+      required: true
+      default: 'region'
   # push:
   #   branches:
   #     - 'main'
