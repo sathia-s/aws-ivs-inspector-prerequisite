@@ -28,15 +28,15 @@ jobs:
         shell: bash
         working-directory: ./terraform
     steps:
+      - name: Checkout the repositoring to the runner
+        uses: actions/checkout@v3
+
       - name: Configure AWS Credentials
         uses: aws-actions/configure-aws-credentials@v4
         with:
           aws-access-key-id: ${{ secrets.ACCESS_KEY }}
           aws-secret-access-key: ${{ secrets.SECRET_ACCESS_KEY }}
           aws-region: ap-south-1
-
-      - name: Checkout the repositoring to the runner
-        uses: actions/checkout@v3
 
       - name: Setup Terraform with specific version on the the runner
         uses: hashicorp/setup-terraform@v3
