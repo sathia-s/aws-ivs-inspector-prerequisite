@@ -14,7 +14,7 @@ provider "aws" {
 }
 
 resource "aws_s3_bucket" "tf_state" {
-  bucket = "${var.project_name}-tfstate"
+  bucket = "${var.project_name}-tfstate-test"
 
   # Prevent accidental deletion of this S3 bucket
   lifecycle {
