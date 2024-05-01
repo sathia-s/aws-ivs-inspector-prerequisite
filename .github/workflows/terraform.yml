@@ -1,4 +1,4 @@
-name: IVS Inspector Prerequisites
+name: IVS Inspector Prerequisites Deployment Pipeline with GitHub Actions
 
 on: workflow_dispatch
   # push:
